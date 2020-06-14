@@ -16,7 +16,7 @@ reddit = praw.Reddit(client_id=client_id,
 for submission in reddit.subreddit(sub).new(limit=None):
     submission.comments.replace_more(limit=None)
     for comment in submission.comments.list():
-        if (comment.saved is not True):
+        if (not comment.saved):
           if ( "arch" in comment.body and "btw" in comment.body ):
             comment.reply("I use Arch btw. \n^Beep ^Boop")
             comment.save()
