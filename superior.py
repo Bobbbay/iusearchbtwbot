@@ -1,7 +1,7 @@
 import praw
 import os
 
-sub = "bobbbaybots"
+sub = "linuxmasterrace"
 
 client_id = os.environ.get('client_id')
 client_secret = os.environ.get('client_secret')
